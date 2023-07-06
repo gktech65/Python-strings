@@ -1,2 +1,2 @@
-# Python-strings
+# python-strings
 Basic Python programs using strings
