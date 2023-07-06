@@ -1,0 +1,100 @@
+(1)
+#Assume that the variable data refers to the string "myprogram.exe". Write the values of the following expressions
+# A. data[2] 
+# B. data[-1] 
+# C. len(data) 
+# D. data[0:8] 
+
+data="myprogram.exe"
+print(data[2])
+print(data[-1])
+print(len(data))
+print(data[0:8])
+
+(2)
+#Assume that the variable data refers to the string "myprogram.exe". Write the expressions that perform the following tasks
+# A. Extract the substring "gram" from deta 
+# B. Truncate the extension ".exe " from data 
+# C. Extract the character at the middle position from data   
+
+data="myprogram.exe"
+print(data[5:9])
+print(data[0:9])
+print(data[6])
+
+(3)
+#Reverse a user input string using slicing
+
+X=str(input())
+print(X[::-1])
+
+(5)
+#Write a program to implement Caser cipher (input a line of plain text and distance value and outputs an encrypted text)
+
+plaintext = input()
+shift = input()
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+ciphertext = ""
+while isinstance(int(shift), int) == False:
+  shift = input("")
+shift = int(shift)
+new_ind = 0 
+for i in plaintext:
+  if i.lower() in alphabet:
+    new_ind = alphabet.index(i) + shift
+    ciphertext += alphabet[new_ind % 26]
+  else:
+    ciphertext += i    
+print(ciphertext)
+
+(6)
+
+# Assume that the variable data contains the string “Python Rules!”. 
+#A. Convert the string to uppercase
+#B. Locate the position of the string “rules”
+#C. Replace the exclamation point with a question mark
+
+data="Python Rules!"
+print(data.upper())
+print(data.find("Rules"))
+print(data.replace("!","?"))
+
+(7)
+
+#Assume that the variables x and y refer to strings. Write a code segment that prints these strings in alphabetical order. You should assume that they are not equal
+
+x=input()
+y=input()
+c=x[0]
+d=y[0]
+if c>d:
+  print(y)
+  print(x)
+else:
+  print(x)
+  print(y)
+
+(8)
+# Write a Python program to get a string maade of the first 2 and the last 2 chars from a given string. If the string length is less than or equal to 3, return the original string 
+
+x=input()
+n=len(x)
+if n<=3:
+  print(x)
+else:
+  y=x[0:2]+x[-2:n]
+  print(y)
+
+(9)
+# Write a Pythom program to add "ing" at the end of a given string (length of string should be atleast 3). If the given string already ends with "ing" then add "ly" instead. If string length is less than 3, leave it unchanged
+
+x=input()
+n=len(x)
+if n<=3:
+  y=x
+elif x.find("ing")==True:
+   y=x+"ly"
+else:
+  y=x+"ing"
+  print(y)
+
